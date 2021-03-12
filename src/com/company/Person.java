@@ -9,40 +9,44 @@ public class Person {
         this.name = name;
         this.lastName = lastName;
         this.adress = adress;
+        if(name == null || lastName == null || adress == null){
+            throw new NullFieldException("Введено недопустимое значение null");
+        }
 
     }
 
-    public String getName() throws NullFieldException{
-        if(name == null){
-            throw new NullFieldException("Введено недопустимое значение null");
-        }
-        return name;
+    public String getName(){
+       return name;
     }
 
-    public String getLastName() throws NullFieldException {
-        if(lastName == null){
-            throw new NullFieldException("Введено недопустимое значение null");
-        }
+    public String getLastName(){
         return lastName;
     }
 
-    public void setName(String name){
+    public void setName(String name) throws NullFieldException{
         this.name = name;
+        if(name == null){
+            throw new NullFieldException("Введено недопустимое значение null");
+        }
+
     }
 
-    public void setLastName(String lastName){
+    public void setLastName(String lastName) throws NullFieldException{
         this.lastName = lastName;
+        if(lastName == null){
+            throw new NullFieldException("Введено недопустимое значение null");
+        }
     }
 
-    public void setAdress(Adress adress){
+    public void setAdress(Adress adress) throws NullFieldException {
         this.adress = adress;
-    }
-
-    public Adress getAdress() throws NullFieldException {
         if(adress == null){
             throw new NullFieldException("Введено недопустимое значение null");
         }
-        return adress;
+    }
+
+    public Adress getAdress(){
+       return adress;
     }
 
 

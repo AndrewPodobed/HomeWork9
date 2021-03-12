@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException, EmptySourceFileException {
 
-        Person person1 = new Person("Виктор", "Фролов", new Adress("Москва", "Москворечная", 16));
+        Person person1 = new Person("Vasia", "Фролов", new Adress("Москва", "Москворечная", 16));
         Person person2 = new Person("Максим", "Потехин", new Adress("Санкт-Петербург", "Ленина", 45));
         Person person3 = new Person("Илья", "Швед", new Adress("Минск", "Победы", 52));
 
